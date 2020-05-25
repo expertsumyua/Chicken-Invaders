@@ -87,10 +87,9 @@ function createEgg(RecX, RecY) {
 				}
 			}, 25);
 		}, 10);
-		// gameField.appendChild(egg);
-		gameField.prepend(egg);
-		// console.dir(egg);
-	}, 150);
+		gameField.appendChild(egg);
+		console.dir(egg);
+	}, 1500);
 }
 
 function removeEgg(thisEgg) {
