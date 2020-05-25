@@ -71,18 +71,16 @@ function createEgg(RecX, RecY) {
 		}, 1000);
 		setTimeout(function () {
 			egg.style.transition = "all 0s";
-			let eggInt = setInterval(function () {
+			setInterval(function () {
 				egg.style.top = egg.offsetTop + 1 + "px";
 				isCollide(egg, starship)
 				if (isCollide(egg, starship)) {
-					clearTimeout(eggInt);
 					removeEgg(egg);
 					if (move) {
 						destroyStarship(egg, starship);
 					}
 				}
 				else if (egg.offsetTop > gameField.offsetTop) {
-					clearTimeout(eggInt);
 					removeEgg(egg);
 				}
 

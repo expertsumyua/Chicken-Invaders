@@ -37,7 +37,6 @@ function createBonus(thisRec) {
 				bonus.style.top = bonus.offsetTop + 1 + "px";
 				isCollide(bonus, starship)
 				if (isCollide(bonus, starship)) {
-					clearTimeout(bonusInt);
 					removeBonus(bonus);
 					if (move) {
 						pointCounter(count);
@@ -45,7 +44,6 @@ function createBonus(thisRec) {
 				}
 				else if (bonus.offsetTop > gameField.offsetHeight) {
 					//console.dir(bonus.offsetTop);
-					clearTimeout(bonusInt);
 					removeBonus(bonus);
 				}
 			}, 25);
@@ -71,18 +69,16 @@ function createEgg(RecX, RecY) {
 		}, 1000);
 		setTimeout(function () {
 			egg.style.transition = "all 0s";
-			let eggInt = setInterval(function () {
+			setInterval(function () {
 				egg.style.top = egg.offsetTop + 1 + "px";
 				isCollide(egg, starship)
 				if (isCollide(egg, starship)) {
-					clearTimeout(eggInt);
 					removeEgg(egg);
 					if (move) {
 						destroyStarship(egg, starship);
 					}
 				}
 				else if (egg.offsetTop > gameField.offsetTop) {
-					clearTimeout(eggInt);
 					removeEgg(egg);
 				}
 
