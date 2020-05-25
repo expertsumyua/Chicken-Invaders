@@ -61,7 +61,7 @@ function removeBonus(thisBonus) {
 
 function createEgg(RecX, RecY) {
 	var egg = document.createElement("div");
-	egg.className = "bonus";
+	egg.className = "egg";
 	egg.style.top = RecY + "px";
 	egg.style.left = RecX + "px";
 	egg.style.backgroundImage = "url('img/bonus/egg.png')";
@@ -85,7 +85,6 @@ function createEgg(RecX, RecY) {
 					clearTimeout(eggInt);
 					removeEgg(egg);
 				}
-
 			}, 25);
 		}, 10);
 		gameField.appendChild(egg);
