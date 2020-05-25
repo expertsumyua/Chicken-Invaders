@@ -87,8 +87,8 @@ function createEgg(RecX, RecY) {
 				}
 			}, 25);
 		}, 10);
-		// gameField.appendChild(egg);
-		gameField.prepend(egg);
+		// gameField.appendChild(egg); // Устаревший метод
+		gameField.prepend(egg); // Новые методы
 		// console.dir(egg);
 	}, 150);
 }
