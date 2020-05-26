@@ -11,7 +11,7 @@ var chickenSum = 5;
 var stars = null;
 // Блок для отображения жизней 
 var lifesBlock = null;
-//life==жизни на игровом поле
+//lifes==жизни на игровом поле
 var life = null;
 // переменная кол-ва жизней
 var lifesCount = 5;
