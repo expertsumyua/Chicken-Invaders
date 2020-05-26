@@ -68,9 +68,9 @@ function removeLifes() {
 	lifesCount--;
 	if (lifesCount < 1) {
 		// move = false;
-		console.dir(lifesCount);
 		clearGameField();
 		showGameWindow(gameStatus.GAMEOVER);
+		console.dir(lifesCount);
 	} else if (lifesCount > 0) {
 		//console.dir(lifesCount);
 		removeLifesBlock();
@@ -79,6 +79,5 @@ function removeLifes() {
 }
 
 function removeLifesBlock() {
-	if (lifesCount == 0) { lifesCount = 5; }
 	lifesBlock.remove();
 }

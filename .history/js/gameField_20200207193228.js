@@ -7,46 +7,49 @@ function createPointBlock() {
 	// прописываем очки
 	pointBlock.innerText = pointCount;
 	//добавляем очки в игру 
-	gameField.appendChild(pointBlock);
+	gameField.appendChild(pointBlock);	
 }
 function pointCounter(count) {
-	if (move) {
-		if (count == 4) {
+	if(move)
+	{
+		if (count == 4 ) {
 			soundClick(5);
-			if ((lifesCount > 0) && (lifesCount < 5)) {
-				addLifes();
-			}
+			if ((lifesCount > 0)&&(lifesCount < 5))
+				{
+					addLifes();
+				}
 			else {
-				pointCount += count;
+				pointCount+=count;
 				pointBlock.innerText = pointCount;
 			}
-
+			
 		} else {
 			soundClick(4);
-			pointCount += count;
+			pointCount+=count;
 			pointBlock.innerText = pointCount;
 		}
-		if (pointCount == 10) {
+		if (pointCount == 10)
+		{
 			showGameWindow(gameStatus.FINISH);
-			clearGameField();
-
-		}
-	}
+		clearGameField();
+		
+		}	
+	}	
 }
 
 function removePointBlock() {
 	pointBlock.remove();
 }
 
-
+ 
 // создание блока lifes;
-function createLifesBlock() {
+function createLifesBlock() { 
 	// создаем div и добавляем его в игру, прописываем id 
 	var curretLifesSum = lifesCount;
 	lifesBlock = document.createElement("div");
 	lifesBlock.className = "lifes-block";
 	gameField.appendChild(lifesBlock);
-	while (curretLifesSum) {
+	while(curretLifesSum){
 		createLife();
 		curretLifesSum--;
 	}
@@ -66,19 +69,22 @@ function addLifes() {
 }
 function removeLifes() {
 	lifesCount--;
+	///removeLifesBlock();
+		
 	if (lifesCount < 1) {
-		// move = false;
-		console.dir(lifesCount);
+		move = false;
 		clearGameField();
 		showGameWindow(gameStatus.GAMEOVER);
+		console.dir(lifesCount);
 	} else if (lifesCount > 0) {
 		//console.dir(lifesCount);
 		removeLifesBlock();
-		createLifesBlock();
+		createLifesBlock(lifesCount);
+		
 	}
-}
+	
+}		
 
 function removeLifesBlock() {
-	if (lifesCount == 0) { lifesCount = 5; }
 	lifesBlock.remove();
 }

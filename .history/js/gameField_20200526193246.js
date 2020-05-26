@@ -65,20 +65,24 @@ function addLifes() {
 
 }
 function removeLifes() {
-	lifesCount--;
-	if (lifesCount < 1) {
-		// move = false;
-		console.dir(lifesCount);
+
+	///removeLifesBlock();
+
+	if (lifesCount-- < 1) {
+		move = false;
 		clearGameField();
 		showGameWindow(gameStatus.GAMEOVER);
-	} else if (lifesCount > 0) {
+		console.dir(lifesCount);
+	} else if (lifesCount-- > 0) {
 		//console.dir(lifesCount);
+		// lifesCount--;
 		removeLifesBlock();
-		createLifesBlock();
+		createLifesBlock(lifesCount);
+
 	}
+
 }
 
 function removeLifesBlock() {
-	if (lifesCount == 0) { lifesCount = 5; }
 	lifesBlock.remove();
 }
