@@ -396,7 +396,7 @@ function destroyChicken(chicken) {
 	clearInterval(chicken._timerId);
 	chicken.remove();
 	chickenCount--;
-	if (lifesCount > 0) {
+	if (lifesCount) {
 		if (chickenCount == 0) {
 			createManyChicken();
 		}
@@ -421,7 +421,6 @@ function clearChickens() {
 	let chicken = document.querySelectorAll(".chicken");
 	chicken.forEach(function (chicken) {
 		destroyChicken(chicken);
-
 	});
-	// chickenCount = 0;
+	chickenCount = 0;
 }

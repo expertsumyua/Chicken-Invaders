@@ -423,5 +423,5 @@ function clearChickens() {
 		destroyChicken(chicken);
 
 	});
-	// chickenCount = 0;
+	chickenCount = 0;
 }
