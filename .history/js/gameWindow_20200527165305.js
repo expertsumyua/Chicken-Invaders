@@ -118,8 +118,12 @@ function showStartWindow() {
 
 
 function gameInit() {
-
-	createGameField();
+	move = true;
+	soundFonStart();
+	createStarship();
+	createLifesBlock();
+	createPointBlock();
+	createManyChicken();
 
 }
 

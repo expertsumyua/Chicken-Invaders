@@ -14,11 +14,11 @@ var lifesBlock = null;
 //life==жизни на игровом поле
 var life = null;
 // переменная кол-ва жизней
-var lifesCount = null;
+var lifesCount = 5;
 
 var pointBlock = null;
 // переменная очков
-var pointCount = null;
+var pointCount = 0;
 
 //var keyS = false;
 

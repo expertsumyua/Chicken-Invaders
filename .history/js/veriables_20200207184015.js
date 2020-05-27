@@ -6,19 +6,19 @@ var starshipImg = null;
 // счетчик куриц
 var chickenCount = 0;
 // сумма куриц на игровом поле
-var chickenSum = 5;
+var chickenSum =5;
 // stars==очки на иговом поле
 var stars = null;
 // Блок для отображения жизней 
 var lifesBlock = null;
-//life==жизни на игровом поле
+//lifes==жизни на игровом поле
 var life = null;
 // переменная кол-ва жизней
-var lifesCount = null;
+var lifesCount =5;
 
 var pointBlock = null;
 // переменная очков
-var pointCount = null;
+var pointCount = 0;
 
 //var keyS = false;
 

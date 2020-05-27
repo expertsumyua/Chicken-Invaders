@@ -374,7 +374,7 @@ function isIntersect(element) {
  */
 function removeChicken(thisChicken) {
 	clearInterval(thisChicken._timerId);
-	let chickenEexplosion = document.createElement("div");
+	var chickenEexplosion = document.createElement("div");
 	chickenEexplosion.style.left = thisChicken.offsetLeft + "px";
 	chickenEexplosion.style.top = thisChicken.offsetTop + "px";
 	if (thisChicken.className == "chicken") {

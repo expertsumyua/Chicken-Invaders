@@ -374,7 +374,7 @@ function isIntersect(element) {
  */
 function removeChicken(thisChicken) {
 	clearInterval(thisChicken._timerId);
-	let chickenEexplosion = document.createElement("div");
+	var chickenEexplosion = document.createElement("div");
 	chickenEexplosion.style.left = thisChicken.offsetLeft + "px";
 	chickenEexplosion.style.top = thisChicken.offsetTop + "px";
 	if (thisChicken.className == "chicken") {
@@ -408,7 +408,7 @@ function destroyChicken(chicken) {
 //Функция по созданию множетва летающих ТВАРЕЙ! :-))))
 function createManyChicken() {
 	setTimeout(function () {
-		let curretChickenSum = chickenSum;
+		var curretChickenSum = chickenSum;
 		while (curretChickenSum) {
 			createChicken();
 			curretChickenSum--;
@@ -418,7 +418,7 @@ function createManyChicken() {
 }
 
 function clearChickens() {
-	let chicken = document.querySelectorAll(".chicken");
+	var chicken = document.querySelectorAll(".chicken");
 	chicken.forEach(function (chicken) {
 		destroyChicken(chicken);
 	});

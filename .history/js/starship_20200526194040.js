@@ -31,7 +31,7 @@ function destroyStarship(thisStarship, thisRec) {
 	if (lifesCount > 1) {
 		thisStarship.remove();
 		removeLifes();
-		if (lifesCount > 0) {
+		if (lifesCount != 0) {
 			createStarship();
 		}
 	} else {
