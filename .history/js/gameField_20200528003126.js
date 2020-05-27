@@ -1,12 +1,11 @@
 // cоздание блока очков
-function createPointBlock(thisP) {
-	// pointCount = thisP;
+function createPointBlock() {
 	//создаем div
 	pointBlock = document.createElement("div");
 	//прописываем класс
 	pointBlock.className = "point-block";
 	// прописываем очки
-	pointBlock.innerText = pointCount = thisP;
+	pointBlock.innerText = pointCount;
 	//добавляем очки в игру 
 	gameField.appendChild(pointBlock);
 }
@@ -70,7 +69,7 @@ function removeLifes() {
 	lifesCount--;
 	if (lifesCount < 1) {
 		// move = false;
-		console.dir("Жизней: " + lifesCount);
+		console.dir(lifesCount);
 		clearGameField();
 		showGameWindow(gameStatus.GAMEOVER);
 	} else if (lifesCount > 0) {
@@ -90,9 +89,9 @@ function createGameField() {
 	soundFonStart();
 	createStarship();
 	// lifesCount = 5;
-	createLifesBlock(2);
-	// pointCount = 0;
-	createPointBlock(0);
+	createLifesBlock(5);
+	pointCount = 0;
+	createPointBlock();
 	createManyChicken();
 
 }
@@ -100,8 +99,8 @@ function createGameField() {
 function clearGameField() {
 	move = false;
 	soundFonStop();
-	// var starship = document.querySelector(".starship");
-	// if (starship) starship.remove();
+	var starship = document.querySelector(".starship");
+	if (starship) starship.remove();
 	clearChickens();
 	removeLifesBlock();
 	removePointBlock();

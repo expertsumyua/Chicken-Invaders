@@ -78,8 +78,7 @@ function createEgg(RecX, RecY) {
 					clearTimeout(eggInt);
 					removeEgg(egg);
 					if (move) {
-						destroyStarship(starship, egg);
-						console.dir("BOOM-egg");
+						destroyStarship(egg, starship);
 					}
 				}
 				else if (egg.offsetTop > gameField.offsetHeight) {

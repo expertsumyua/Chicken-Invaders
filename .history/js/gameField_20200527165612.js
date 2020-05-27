@@ -1,12 +1,11 @@
 // cоздание блока очков
-function createPointBlock(thisP) {
-	// pointCount = thisP;
+function createPointBlock() {
 	//создаем div
 	pointBlock = document.createElement("div");
 	//прописываем класс
 	pointBlock.className = "point-block";
 	// прописываем очки
-	pointBlock.innerText = pointCount = thisP;
+	pointBlock.innerText = pointCount;
 	//добавляем очки в игру 
 	gameField.appendChild(pointBlock);
 }
@@ -36,15 +35,14 @@ function pointCounter(count) {
 }
 
 function removePointBlock() {
-	// pointCount = 0;
 	pointBlock.remove();
 }
 
 
 // создание блока lifes;
-function createLifesBlock(thisL) {
+function createLifesBlock() {
 	// создаем div и добавляем его в игру, прописываем id 
-	var curretLifesSum = lifesCount = thisL;
+	var curretLifesSum = lifesCount;
 	lifesBlock = document.createElement("div");
 	lifesBlock.className = "lifes-block";
 	gameField.appendChild(lifesBlock);
@@ -62,26 +60,26 @@ function createLife() {
 
 function addLifes() {
 	removeLifesBlock();
-	// lifesCount++;
-	createLifesBlock(lifesCount++);
+	lifesCount++;
+	createLifesBlock();
 
 }
 function removeLifes() {
 	lifesCount--;
 	if (lifesCount < 1) {
 		// move = false;
-		console.dir("Жизней: " + lifesCount);
+		console.dir(lifesCount);
 		clearGameField();
 		showGameWindow(gameStatus.GAMEOVER);
 	} else if (lifesCount > 0) {
 		//console.dir(lifesCount);
 		removeLifesBlock();
-		createLifesBlock(lifesCount);
+		createLifesBlock();
 	}
 }
 
 function removeLifesBlock() {
-	// if (lifesCount == 0) { lifesCount = 5; }
+	if (lifesCount == 0) { lifesCount = 5; }
 	lifesBlock.remove();
 }
 
@@ -89,10 +87,8 @@ function createGameField() {
 	move = true;
 	soundFonStart();
 	createStarship();
-	// lifesCount = 5;
-	createLifesBlock(2);
-	// pointCount = 0;
-	createPointBlock(0);
+	createLifesBlock();
+	createPointBlock();
 	createManyChicken();
 
 }
@@ -100,10 +96,10 @@ function createGameField() {
 function clearGameField() {
 	move = false;
 	soundFonStop();
-	// var starship = document.querySelector(".starship");
-	// if (starship) starship.remove();
+	var starship = document.querySelector(".starship");
+	if (starship) starship.remove();
 	clearChickens();
 	removeLifesBlock();
-	removePointBlock();
 	gameField.remove();
+	removePointBlock();
 }

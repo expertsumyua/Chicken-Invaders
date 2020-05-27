@@ -70,7 +70,7 @@ function removeLifes() {
 	lifesCount--;
 	if (lifesCount < 1) {
 		// move = false;
-		console.dir("Жизней: " + lifesCount);
+		console.dir(lifesCount);
 		clearGameField();
 		showGameWindow(gameStatus.GAMEOVER);
 	} else if (lifesCount > 0) {
@@ -101,7 +101,7 @@ function clearGameField() {
 	move = false;
 	soundFonStop();
 	// var starship = document.querySelector(".starship");
-	// if (starship) starship.remove();
+	if (starship) starship.remove();
 	clearChickens();
 	removeLifesBlock();
 	removePointBlock();
