@@ -12,29 +12,28 @@ function createPointBlock(thisP) {
 }
 
 function pointCounter(count) {
-	// if (move) {
-	if (count == 4) {
-		soundClick(5);
-		if (lifesCount < lifesAmount) {
-			addLifes();
-		}
-		else if (lifesCount == lifesAmount) {
+	if (move) {
+		if (count == 4) {
+			soundClick(5);
+			if (lifesCount < lifesAmount) {
+				addLifes();
+			}
+			else if (lifesCount == lifesAmount) {
+				pointCount += count;
+				pointBlock.innerText = pointCount;
+			}
+
+		} else {
+			soundClick(4);
 			pointCount += count;
 			pointBlock.innerText = pointCount;
 		}
+		if (pointCount >= 10) {
+			showGameWindow(gameStatus.FINISH);
+			clearGameField();
 
-	} else {
-		soundClick(4);
-		pointCount += count;
-		pointBlock.innerText = pointCount;
+		}
 	}
-	if (pointCount >= 10) {
-		starship.remove();
-		clearGameField();
-		showGameWindow(gameStatus.FINISH);
-		// showGameWindow(gameStatus.GAMEOVER);
-	}
-	// }
 }
 
 function removePointBlock() {
@@ -69,15 +68,15 @@ function addLifes() {
 }
 function removeLifes() {
 	lifesCount--;
-	if (lifesCount > 0) {
-		//console.dir(lifesCount);
-		removeLifesBlock();
-		createLifesBlock(lifesCount);
-	} if (lifesCount == 0) {
+	if (lifesCount < 1) {
 		// move = false;
 		console.dir("Жизней: " + lifesCount);
 		clearGameField();
 		showGameWindow(gameStatus.GAMEOVER);
+	} else if (lifesCount > 0) {
+		//console.dir(lifesCount);
+		removeLifesBlock();
+		createLifesBlock(lifesCount);
 	}
 	// console.dir(lifesCount);
 }
@@ -88,7 +87,6 @@ function removeLifesBlock() {
 }
 
 function createGameField() {
-	game = true;
 	move = true;
 	soundFonStart();
 	createStarship();
@@ -104,15 +102,13 @@ function createGameField() {
 
 function clearGameField() {
 	move = false;
-	game = false;
 	soundFonStop();
-	clearBonuses();
 	clearChickens();
 	// let starship = document.querySelector(".starship");
 	// if (starship) starship.remove();	
+	// starship.remove();
 	removeLifesBlock();
 	removePointBlock();
 	gameField.remove();
-
 	// console.dir("Осталось всего курей: " + chickenCount);
 }

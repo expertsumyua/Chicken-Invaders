@@ -88,7 +88,6 @@ function removeLifesBlock() {
 }
 
 function createGameField() {
-	game = true;
 	move = true;
 	soundFonStart();
 	createStarship();
@@ -110,6 +109,7 @@ function clearGameField() {
 	clearChickens();
 	// let starship = document.querySelector(".starship");
 	// if (starship) starship.remove();	
+
 	removeLifesBlock();
 	removePointBlock();
 	gameField.remove();

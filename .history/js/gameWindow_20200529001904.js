@@ -115,9 +115,9 @@ function showStartWindow() {
 		startButton.innerHTML = "GO";
 	};
 	startButton.onmouseout = function () {
-		startButton.innerHTML = "START";
+		startButton.innerHTML = "GO";
 	};
-
+}
 }
 
 

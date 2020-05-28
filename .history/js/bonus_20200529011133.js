@@ -98,9 +98,11 @@ function removeEgg(thisEgg) {
 	thisEgg.remove();
 }
 
-function clearBonuses() {
-	let bonus = document.querySelectorAll(".bonus");
-	bonus.forEach(function (bonus) {
-		removeBonus(bonus);
+function clearChickens() {
+	let chicken = document.querySelectorAll(".chicken");
+	chicken.forEach(function (chicken) {
+		destroyChicken(chicken);
 	});
+	/* chickenCount = 0; Обнуление счетчика необходимо
+	делать перед самим создание множества курей */
 }

@@ -14,7 +14,7 @@ var lifesBlock = null;
 //life==жизни на игровом поле
 var life = null;
 // переменная кол-ва жизней
-var lifesAmount = 5;
+var lifesAmount = 2;
 // переменная счетчика жизней
 var lifesCount = null;
 

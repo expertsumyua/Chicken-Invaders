@@ -123,6 +123,7 @@ function showStartWindow() {
 
 function gameInit() {
 
+	clearGameField();
 	createGameField();
 
 }

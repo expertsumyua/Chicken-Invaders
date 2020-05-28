@@ -103,7 +103,8 @@ function showStartWindow() {
 	var startButton = createEl("div", "start-button");
 	startButton.innerText = "START";
 	startButton.onclick = function () {
-		showGameWindow(gameStatus.PLAY);
+		// showGameWindow(gameStatus.PLAY);
+		showPlayWindow();
 	};
 	gameWindow.append(discription);
 	gameWindow.append(discription2);

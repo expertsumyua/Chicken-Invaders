@@ -419,6 +419,6 @@ function clearChickens() {
 	chicken.forEach(function (chicken) {
 		removeChicken(chicken);
 	});
-	/* chickenCount = 0; Обнуление счетчика необходимо
+	chickenCount = 0; /*Обнуление счетчика необходимо
 	делать перед самим создание множества курей */
 }

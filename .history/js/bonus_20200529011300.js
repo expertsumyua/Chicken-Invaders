@@ -103,4 +103,6 @@ function clearBonuses() {
 	bonus.forEach(function (bonus) {
 		removeBonus(bonus);
 	});
+	/* chickenCount = 0; Обнуление счетчика необходимо
+	делать перед самим создание множества курей */
 }
