@@ -18,7 +18,7 @@ function pointCounter(count) {
 			if (lifesCount < lifesAmount) {
 				addLifes();
 			}
-			else if (lifesCount == lifesAmount) {
+			else if (lifesCount < lifesAmount) {
 				pointCount += count;
 				pointBlock.innerText = pointCount;
 			}
