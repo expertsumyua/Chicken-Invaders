@@ -57,7 +57,7 @@ function moveBullet(thisBullet) {
 	thisBullet.style.top = starship.offsetTop - 100 + "px";
 	thisBullet.style.left = starship.offsetLeft + "px";
 
-	let timerBullet = setInterval(function () {
+	var timerBullet = setInterval(function () {
 		thisBullet.style.top = 0 + "px";
 		// если пуля вышла за пределыполя=> 
 		if (thisBullet.offsetTop < 1) {	// удуляем пулю
@@ -76,7 +76,7 @@ function moveBullet(thisBullet) {
 					}
 				}
 				curretChickenSum++;
-
+				//
 			}
 		}
 	}, 10);

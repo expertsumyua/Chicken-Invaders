@@ -94,6 +94,7 @@ function createGameField() {
 	createPointBlock(0);
 	createManyChicken();
 	console.dir("Курей: " + chickenCount);
+
 }
 
 function clearGameField() {

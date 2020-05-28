@@ -419,9 +419,11 @@ function createManyChicken() {
 
 function clearChickens() {
 	let chicken = document.querySelectorAll(".chicken");
-	chicken.forEach(function (chicken) {
-		destroyChicken(chicken);
+	chicken.remove();
+	chickenCount = 0;
+	// chicken.forEach(function (chicken) {
+	// 	destroyChicken(chicken);
+	// 	chickenCount--;
+	// });
 
-	});
-	// chickenCount = 0;
 }

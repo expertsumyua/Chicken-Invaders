@@ -421,7 +421,6 @@ function clearChickens() {
 	let chicken = document.querySelectorAll(".chicken");
 	chicken.forEach(function (chicken) {
 		destroyChicken(chicken);
-
 	});
-	// chickenCount = 0;
+	chickenCount = 0;
 }
