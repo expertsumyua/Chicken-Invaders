@@ -27,15 +27,13 @@ function destroyStarship(thisStarship, thisRec) {
 
 
 	if (thisRec.className == "chicken") {
-		destroyChicken(thisRec);
+		removeChicken(thisRec);
 	} else {
 		removeEgg(thisRec);
 	}
 
 	// if (lifesCount > 1) {
-	// thisStarship.remove(); // Удалять нельзя через самого себя!
-	starship.remove();
-	console.dir("Starship УМЕР");
+	thisStarship.remove();
 	removeLifes();
 	if (lifesCount > 0) {
 		createStarship();
@@ -54,7 +52,7 @@ function createBullet() {
 	//прописываем класс
 	bullet.id = "bullet";
 	moveBullet(bullet);
-	gameField.append(bullet);
+	gameField.appendChild(bullet);
 
 }
 
@@ -77,7 +75,7 @@ function moveBullet(thisBullet) {
 				if (thisChicken != null) {
 
 					if (isCollide(thisChicken, thisBullet)) {
-						destroyChicken(thisChicken);
+						removeChicken(thisChicken);
 						clearTimeout(timerBullet);
 						thisBullet.remove();
 					}

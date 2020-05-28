@@ -1,5 +1,6 @@
 // Функция создания Звездалета
 function createStarship() {
+	starship = null;
 	starship = document.createElement("div");
 	starship.className = "starship";
 	setTimeout(function () {
@@ -33,8 +34,8 @@ function destroyStarship(thisStarship, thisRec) {
 	}
 
 	// if (lifesCount > 1) {
-	// thisStarship.remove(); // Удалять нельзя через самого себя!
-	starship.remove();
+	thisStarship.remove();
+	// starship.remove();
 	console.dir("Starship УМЕР");
 	removeLifes();
 	if (lifesCount > 0) {

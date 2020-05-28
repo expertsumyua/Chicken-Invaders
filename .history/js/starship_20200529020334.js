@@ -33,7 +33,7 @@ function destroyStarship(thisStarship, thisRec) {
 	}
 
 	// if (lifesCount > 1) {
-	// thisStarship.remove(); // Удалять нельзя через самого себя!
+	// thisStarship.remove();
 	starship.remove();
 	console.dir("Starship УМЕР");
 	removeLifes();

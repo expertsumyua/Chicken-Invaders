@@ -50,7 +50,7 @@ function createBonus(thisRec) {
 				}
 			}, 25);
 		}, 10);
-		gameField.prepend(bonus);
+		gameField.append(bonus);
 	}, 1500);
 }
 
@@ -96,11 +96,4 @@ function createEgg(RecX, RecY) {
 
 function removeEgg(thisEgg) {
 	thisEgg.remove();
-}
-
-function clearBonuses() {
-	let bonus = document.querySelectorAll(".bonus");
-	bonus.forEach(function (bonus) {
-		removeBonus(bonus);
-	});
 }

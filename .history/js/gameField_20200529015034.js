@@ -28,10 +28,10 @@ function pointCounter(count) {
 		pointCount += count;
 		pointBlock.innerText = pointCount;
 	}
-	if (pointCount >= 10) {
+	if (pointCount >= 3) {
 		starship.remove();
 		clearGameField();
-		showGameWindow(gameStatus.FINISH);
+		// showGameWindow(gameStatus.FINISH);
 		// showGameWindow(gameStatus.GAMEOVER);
 	}
 	// }
@@ -88,7 +88,6 @@ function removeLifesBlock() {
 }
 
 function createGameField() {
-	game = true;
 	move = true;
 	soundFonStart();
 	createStarship();
@@ -97,7 +96,7 @@ function createGameField() {
 	console.dir(lifesCount);
 	// pointCount = 0;
 	createPointBlock(0);
-	chickenCount = 0; /* необходимо эсдесь делать обнуление */
+	// chickenCount = 0; /* необходимо эсдесь делать обнуление */
 	createManyChicken();
 	console.dir("Курей должно быть: " + chickenCount);
 }
@@ -110,9 +109,10 @@ function clearGameField() {
 	clearChickens();
 	// let starship = document.querySelector(".starship");
 	// if (starship) starship.remove();	
-	removeLifesBlock();
-	removePointBlock();
-	gameField.remove();
+
+	// removeLifesBlock();
+	// removePointBlock();
+	// gameField.remove();
 
 	// console.dir("Осталось всего курей: " + chickenCount);
 }

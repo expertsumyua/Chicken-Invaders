@@ -98,9 +98,3 @@ function removeEgg(thisEgg) {
 	thisEgg.remove();
 }
 
-function clearBonuses() {
-	let bonus = document.querySelectorAll(".bonus");
-	bonus.forEach(function (bonus) {
-		removeBonus(bonus);
-	});
-}

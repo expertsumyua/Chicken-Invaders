@@ -396,7 +396,7 @@ function removeChicken(chicken) {
 	clearInterval(chicken._timerId);
 	chicken.remove();
 	chickenCount--;
-	if ((game) && (lifesCount > 0)) {
+	if (lifesCount > 0) {
 		if (chickenCount == 0) {
 			createManyChicken();
 		}
