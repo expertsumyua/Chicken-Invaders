@@ -18,7 +18,7 @@ function pointCounter(count) {
 			if (lifesCount < 5) {
 				addLifes();
 			}
-			else if (lifesCount < 5) {
+			else if (lifesCount  5) {
 				pointCount += count;
 				pointBlock.innerText = pointCount;
 			}
@@ -62,8 +62,8 @@ function createLife() {
 
 function addLifes() {
 	removeLifesBlock();
-	// lifesCount++;
-	createLifesBlock(++lifesCount);
+	lifesCount++;
+	createLifesBlock(lifesCount);
 
 }
 function removeLifes() {

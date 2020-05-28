@@ -62,8 +62,8 @@ function createLife() {
 
 function addLifes() {
 	removeLifesBlock();
-	// lifesCount++;
-	createLifesBlock(++lifesCount);
+	lifesCount++;
+	createLifesBlock(lifesCount);
 
 }
 function removeLifes() {
