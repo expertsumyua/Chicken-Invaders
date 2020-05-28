@@ -3,10 +3,11 @@ function createStarship() {
 	starship = document.createElement("div");
 	starship.className = "starship";
 	setTimeout(function () {
+
 		starship.style.display = "block";
-		// starship.style.position = "absolute";
-		// starship.style.top = "calc(100 % - 70px)";
-		// starship.style.left = "50 %";
+		starship.style.position = "absolute";
+		starship.style.top = "calc(100 % - 70px)";
+		starship.style.left = "50 %";
 		gameField.appendChild(starship);
 		move = true;
 	}, 2000);
@@ -31,15 +32,13 @@ function destroyStarship(thisStarship, thisRec) {
 	} else {
 		removeEgg(thisRec);
 	}
-
 	if (lifesCount > 1) {
 		thisStarship.remove();
 		removeLifes();
-		createStarship();
-		// if (lifesCount > 0) {
-		// 	createStarship();
-		// }
-	} else if (lifesCount == 1) {
+		if (lifesCount > 0) {
+			createStarship();
+		}
+	} else {
 		thisStarship.remove();
 		removeLifes();
 	}

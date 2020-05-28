@@ -403,6 +403,7 @@ function destroyChicken(chicken) {
 	}
 }
 
+
 //Функция по созданию множетва летающих ТВАРЕЙ! :-))))
 function createManyChicken() {
 	setTimeout(function () {
@@ -419,6 +420,5 @@ function clearChickens() {
 	chicken.forEach(function (chicken) {
 		destroyChicken(chicken);
 	});
-	/* chickenCount = 0; Обнуление счетчика необходимо
-	делать перед самим создание множества курей */
+	// chickenCount = 0;
 }

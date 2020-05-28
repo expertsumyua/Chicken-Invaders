@@ -3,11 +3,8 @@ function createStarship() {
 	starship = document.createElement("div");
 	starship.className = "starship";
 	setTimeout(function () {
-		starship.style.display = "block";
-		// starship.style.position = "absolute";
-		// starship.style.top = "calc(100 % - 70px)";
-		// starship.style.left = "50 %";
 		gameField.appendChild(starship);
+		starship.style.display = "block";
 		move = true;
 	}, 2000);
 }
@@ -15,8 +12,8 @@ function createStarship() {
 function destroyStarship(thisStarship, thisRec) {
 	// function destroyStarship(thisStarship) {
 	soundClick(3);
-	// move = false;
-	let starshipEexplosion = document.createElement("div");
+	//move = false;
+	var starshipEexplosion = document.createElement("div");
 	starshipEexplosion.className = "starship-explosion";
 	starshipEexplosion.style.left = thisStarship.offsetLeft + "px";
 	starshipEexplosion.style.top = thisStarship.offsetTop + "px";
@@ -31,15 +28,13 @@ function destroyStarship(thisStarship, thisRec) {
 	} else {
 		removeEgg(thisRec);
 	}
-
 	if (lifesCount > 1) {
 		thisStarship.remove();
 		removeLifes();
-		createStarship();
-		// if (lifesCount > 0) {
-		// 	createStarship();
-		// }
-	} else if (lifesCount == 1) {
+		if (lifesCount > 0) {
+			createStarship();
+		}
+	} else {
 		thisStarship.remove();
 		removeLifes();
 	}
@@ -49,7 +44,7 @@ function destroyStarship(thisStarship, thisRec) {
 function createBullet() {
 	soundClick(1);
 	//создаем div
-	let bullet = document.createElement("div");
+	var bullet = document.createElement("div");
 	//прописываем класс
 	bullet.id = "bullet";
 	moveBullet(bullet);
@@ -66,19 +61,19 @@ function moveBullet(thisBullet) {
 		thisBullet.style.top = 0 + "px";
 		// если пуля вышла за пределыполя=> 
 		if (thisBullet.offsetTop < 1) {	// удуляем пулю
-			clearTimeout(timerBullet);
 			thisBullet.remove();
+			clearTimeout(timerBullet);
 		}
 		else {
-			let curretChickenSum = 0;
+			var curretChickenSum = 0;
 			while (curretChickenSum < chickenSum) {
 				let thisChicken = document.getElementById("chicken_" + curretChickenSum);
 				if (thisChicken != null) {
 
 					if (isCollide(thisChicken, thisBullet)) {
 						removeChicken(thisChicken);
-						clearTimeout(timerBullet);
 						thisBullet.remove();
+						clearTimeout(timerBullet);
 					}
 				}
 				curretChickenSum++;
