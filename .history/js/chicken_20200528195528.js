@@ -393,9 +393,10 @@ function removeChicken(thisChicken) {
 
 //
 function destroyChicken(chicken) {
+	chickenCount--;
 	clearInterval(chicken._timerId);
 	chicken.remove();
-	chickenCount--;
+
 	if (lifesCount > 0) {
 		if (chickenCount == 0) {
 			createManyChicken();
@@ -403,13 +404,17 @@ function destroyChicken(chicken) {
 	}
 }
 
+
 //Функция по созданию множетва летающих ТВАРЕЙ! :-))))
 function createManyChicken() {
+	console.dir("Новых Курей должно быть: " + chickenCount);
+	// chickenCount = 0;
 	setTimeout(function () {
 		let curretChickenSum = chickenSum;
 		while (curretChickenSum) {
 			createChicken();
 			curretChickenSum--;
+			console.dir("Создано курей: " + chickenCount);
 		}
 	}, 3000);
 }
@@ -417,8 +422,9 @@ function createManyChicken() {
 function clearChickens() {
 	let chicken = document.querySelectorAll(".chicken");
 	chicken.forEach(function (chicken) {
+		console.dir("Осталось курей: " + chickenCount);
 		destroyChicken(chicken);
 	});
-	/* chickenCount = 0; Обнуление счетчика необходимо
-	делать перед самим создание множества курей */
+	chickenCount = 0;
+	console.dir("Осталось всего курей: " + chickenCount);
 }

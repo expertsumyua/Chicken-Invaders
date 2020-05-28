@@ -15,10 +15,10 @@ function pointCounter(count) {
 	if (move) {
 		if (count == 4) {
 			soundClick(5);
-			if (lifesCount < 5) {
+			if ((lifesCount > 0) && (lifesCount < 5)) {
 				addLifes();
 			}
-			else if (lifesCount < 5) {
+			else {
 				pointCount += count;
 				pointBlock.innerText = pointCount;
 			}
@@ -28,7 +28,7 @@ function pointCounter(count) {
 			pointCount += count;
 			pointBlock.innerText = pointCount;
 		}
-		if (pointCount >= 10) {
+		if (pointCount == 10) {
 			showGameWindow(gameStatus.FINISH);
 			clearGameField();
 
@@ -44,7 +44,7 @@ function removePointBlock() {
 // создание блока lifes;
 function createLifesBlock(thisL) {
 	// создаем div и добавляем его в игру, прописываем id 
-	let curretLifesSum = thisL;
+	let curretLifesSum = lifesCount = thisL;
 	lifesBlock = document.createElement("div");
 	lifesBlock.className = "lifes-block";
 	gameField.appendChild(lifesBlock);
@@ -63,7 +63,7 @@ function createLife() {
 function addLifes() {
 	removeLifesBlock();
 	// lifesCount++;
-	createLifesBlock(++lifesCount);
+	createLifesBlock(lifesCount++);
 
 }
 function removeLifes() {
@@ -78,7 +78,6 @@ function removeLifes() {
 		removeLifesBlock();
 		createLifesBlock(lifesCount);
 	}
-	// console.dir(lifesCount);
 }
 
 function removeLifesBlock() {
@@ -91,13 +90,12 @@ function createGameField() {
 	soundFonStart();
 	createStarship();
 	// lifesCount = 5;
-	createLifesBlock(lifesCount = 2);
-	console.dir(lifesCount);
+	createLifesBlock(1);
 	// pointCount = 0;
 	createPointBlock(0);
-	chickenCount = 0; /* необходимо эсдесь делать обнуление */
+	// chickenCount = 0;
 	createManyChicken();
-	console.dir("Курей должно быть: " + chickenCount);
+	console.dir("Курей: " + chickenCount);
 }
 
 function clearGameField() {

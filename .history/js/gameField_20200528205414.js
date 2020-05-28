@@ -15,10 +15,10 @@ function pointCounter(count) {
 	if (move) {
 		if (count == 4) {
 			soundClick(5);
-			if (lifesCount < 5) {
+			if ((lifesCount > 0) && (lifesCount < 5)) {
 				addLifes();
 			}
-			else if (lifesCount < 5) {
+			else {
 				pointCount += count;
 				pointBlock.innerText = pointCount;
 			}
@@ -62,8 +62,8 @@ function createLife() {
 
 function addLifes() {
 	removeLifesBlock();
-	// lifesCount++;
-	createLifesBlock(++lifesCount);
+	lifesCount++;
+	createLifesBlock(lifesCount);
 
 }
 function removeLifes() {

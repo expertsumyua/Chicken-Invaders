@@ -403,13 +403,17 @@ function destroyChicken(chicken) {
 	}
 }
 
+
 //Функция по созданию множетва летающих ТВАРЕЙ! :-))))
 function createManyChicken() {
+	console.dir("Новых Курей должно быть: " + chickenCount);
+	// chickenCount = 0;
 	setTimeout(function () {
 		let curretChickenSum = chickenSum;
 		while (curretChickenSum) {
 			createChicken();
 			curretChickenSum--;
+			console.dir("Создано курей: " + chickenCount);
 		}
 	}, 3000);
 }
@@ -419,6 +423,5 @@ function clearChickens() {
 	chicken.forEach(function (chicken) {
 		destroyChicken(chicken);
 	});
-	/* chickenCount = 0; Обнуление счетчика необходимо
-	делать перед самим создание множества курей */
+	// chickenCount = 0;
 }

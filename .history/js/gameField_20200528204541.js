@@ -15,10 +15,10 @@ function pointCounter(count) {
 	if (move) {
 		if (count == 4) {
 			soundClick(5);
-			if (lifesCount < 5) {
+			if ((lifesCount > 0) && (lifesCount < 5)) {
 				addLifes();
 			}
-			else if (lifesCount < 5) {
+			else {
 				pointCount += count;
 				pointBlock.innerText = pointCount;
 			}
@@ -28,7 +28,7 @@ function pointCounter(count) {
 			pointCount += count;
 			pointBlock.innerText = pointCount;
 		}
-		if (pointCount >= 10) {
+		if (pointCount == 10) {
 			showGameWindow(gameStatus.FINISH);
 			clearGameField();
 
@@ -62,8 +62,8 @@ function createLife() {
 
 function addLifes() {
 	removeLifesBlock();
-	// lifesCount++;
-	createLifesBlock(++lifesCount);
+	lifesCount++;
+	createLifesBlock(lifesCount);
 
 }
 function removeLifes() {
@@ -76,9 +76,9 @@ function removeLifes() {
 	} else if (lifesCount > 0) {
 		//console.dir(lifesCount);
 		removeLifesBlock();
-		createLifesBlock(lifesCount);
+		createLifesBlock();
 	}
-	// console.dir(lifesCount);
+	console.dir(lifesCount);
 }
 
 function removeLifesBlock() {
@@ -91,7 +91,7 @@ function createGameField() {
 	soundFonStart();
 	createStarship();
 	// lifesCount = 5;
-	createLifesBlock(lifesCount = 2);
+	createLifesBlock(lifesCount = 5);
 	console.dir(lifesCount);
 	// pointCount = 0;
 	createPointBlock(0);

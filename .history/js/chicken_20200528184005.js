@@ -4,7 +4,7 @@
  *  Создать курицу.
  */
 function createChicken() {
-	let chicken, startX, startY;
+	var chicken, startX, startY;
 
 	// Создаем объект.
 	chicken = document.createElement("div");
@@ -403,6 +403,7 @@ function destroyChicken(chicken) {
 	}
 }
 
+
 //Функция по созданию множетва летающих ТВАРЕЙ! :-))))
 function createManyChicken() {
 	setTimeout(function () {
@@ -410,6 +411,7 @@ function createManyChicken() {
 		while (curretChickenSum) {
 			createChicken();
 			curretChickenSum--;
+			console.dir("Курей: " + chickenCount);
 		}
 	}, 3000);
 }
@@ -418,7 +420,8 @@ function clearChickens() {
 	let chicken = document.querySelectorAll(".chicken");
 	chicken.forEach(function (chicken) {
 		destroyChicken(chicken);
+		console.dir("Осталось курей: " + chickenCount);
+
 	});
-	/* chickenCount = 0; Обнуление счетчика необходимо
-	делать перед самим создание множества курей */
+	chickenCount = 0;
 }

@@ -31,15 +31,13 @@ function destroyStarship(thisStarship, thisRec) {
 	} else {
 		removeEgg(thisRec);
 	}
-
 	if (lifesCount > 1) {
 		thisStarship.remove();
 		removeLifes();
-		createStarship();
-		// if (lifesCount > 0) {
-		// 	createStarship();
-		// }
-	} else if (lifesCount == 1) {
+		if (lifesCount > 0) {
+			createStarship();
+		}
+	} else {
 		thisStarship.remove();
 		removeLifes();
 	}
