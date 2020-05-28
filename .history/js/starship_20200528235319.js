@@ -18,8 +18,8 @@ function destroyStarship(thisStarship, thisRec) {
 	// move = false;
 	let starshipEexplosion = document.createElement("div");
 	starshipEexplosion.className = "starship-explosion";
-	starshipEexplosion.style.left = starship.offsetLeft + "px";
-	starshipEexplosion.style.top = starship.offsetTop + "px";
+	starshipEexplosion.style.left = thisStarship.offsetLeft + "px";
+	starshipEexplosion.style.top = thisStarship.offsetTop + "px";
 	gameField.append(starshipEexplosion);
 	setTimeout(function () {
 		starshipEexplosion.remove();
@@ -33,15 +33,16 @@ function destroyStarship(thisStarship, thisRec) {
 	}
 
 	if (lifesCount > 1) {
-		starship.remove();
+		thisStarship.remove();
 		removeLifes();
 		createStarship();
 		// if (lifesCount > 0) {
 		// 	createStarship();
 		// }
 	} else if (lifesCount == 1) {
-		starship.remove();
-		removeLifes();
+		// thisStarship.remove();
+		// removeLifes();
+		clearGameField();
 	}
 }
 

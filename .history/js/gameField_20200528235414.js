@@ -29,8 +29,9 @@ function pointCounter(count) {
 			pointBlock.innerText = pointCount;
 		}
 		if (pointCount >= 10) {
-			clearGameField();
 			showGameWindow(gameStatus.FINISH);
+			clearGameField();
+
 		}
 	}
 }
@@ -67,7 +68,7 @@ function addLifes() {
 }
 function removeLifes() {
 	lifesCount--;
-	if (lifesCount == 0) {
+	if (lifesCount < 1) {
 		// move = false;
 		console.dir("Жизней: " + lifesCount);
 		clearGameField();
@@ -102,9 +103,9 @@ function createGameField() {
 function clearGameField() {
 	move = false;
 	soundFonStop();
+	// var starship = document.querySelector(".starship");
+	// if (starship) starship.remove();
 	clearChickens();
-	// let starship = document.querySelector(".starship");
-	// if (starship) starship.remove();	
 	removeLifesBlock();
 	removePointBlock();
 	gameField.remove();
