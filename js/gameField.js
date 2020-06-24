@@ -109,7 +109,7 @@ function clearGameField() {
 	clearBonuses();
 	clearChickens();
 	// let starship = document.querySelector(".starship");
-	// if (starship) starship.remove();	
+	if (starship) starship.remove();
 	removeLifesBlock();
 	removePointBlock();
 	gameField.remove();

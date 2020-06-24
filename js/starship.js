@@ -9,7 +9,7 @@ function createStarship() {
 }
 
 function destroyStarship(thisStarship, thisRec) {
-	// function destroyStarship(thisStarship) {
+	// function destroyStarship(thisRec) {
 	soundClick(3);
 	// move = false;
 	let starshipEexplosion = document.createElement("div");
@@ -29,7 +29,7 @@ function destroyStarship(thisStarship, thisRec) {
 	}
 
 	// if (lifesCount > 1) {
-	// thisStarship.remove(); // Удалять нельзя через самого себя!
+	// thisStarship.remove(); // Удалять нельзя через самого себя!	
 	starship.remove();
 	console.dir("Starship УМЕР");
 	removeLifes();

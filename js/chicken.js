@@ -343,7 +343,7 @@ function startFly() {
 			move = false;
 			// Рвем гада.. >:-<<
 			destroyStarship(starship, chicken);
-			// destroyStarship(starship);
+			// destroyStarship(chicken);
 			// destroyChicken(chicken);
 		} else if (0 >= randomCreate--) {
 			this.createEgg(posX, posY);
