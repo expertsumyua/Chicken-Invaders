@@ -1,12 +1,8 @@
 // Функция создания Звездалета
 function createStarship() {
-	starship = document.createElement("div");
-	starship.className = "starship";
 	setTimeout(function () {
-		starship.style.display = "block";
-		// starship.style.position = "absolute";
-		// starship.style.top = "calc(100 % - 70px)";
-		// starship.style.left = "50 %";
+		starship = document.createElement("div");
+		starship.className = "starship";
 		gameField.appendChild(starship);
 		move = true;
 	}, 2000);
