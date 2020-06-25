@@ -1,37 +1,40 @@
-	html, body, #game-app{
-	font-family: 'Jura', sans-serif;
+html,
+body,
+#game-app {
+	font-family: "Jura", sans-serif;
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
 	height: 100%;
 }
 
-.standardWindow{
+.standardWindow {
 	width: inherit;
 	height: inherit;
-	background-image: url('../img/fon2.gif');   
-    background-size: 100%; 
+	background-image: url("../img/fon2.gif");
+	background-size: 100%;
 }
 
 #discription {
-font-family: 'Jura';
-  font-size: 50px;
-  font-weight: 500;
-  color: #ffeb3b;
-  text-align: center;
-  margin-bottom: 30px;
+	margin-top: 0px;
+	font-family: "Jura";
+	font-size: 50px;
+	font-weight: 500;
+	color: #ffeb3b;
+	text-align: center;
+	margin-bottom: 30px;
 }
 
 #discription2 {
-font-family: 'Jura';
-  font-size: 35px;
-  font-weight: 500;
-  color: #ffeb3b;
-  text-align: center;
-  margin-bottom: 15px;
+	font-family: "Jura";
+	font-size: 35px;
+	font-weight: 500;
+	color: #ffeb3b;
+	text-align: center;
+	margin-bottom: 15px;
 }
 
-#start-block{
+#start-block {
 	background-color: red;
 	height: 200px;
 	width: 390px;
@@ -39,135 +42,62 @@ font-family: 'Jura';
 	margin: 100px auto;
 	box-shadow: 0 5px 5px 2px black;
 	border-radius: 85px;
-}	
+}
 
-#start-button {	
-    position: absolute;
-	background-color: #DAA520;
+#start-button {
+	position: absolute;
+	background-color: #daa520;
 	height: 163px;
-    width: 381px;
+	width: 381px;
 	border-radius: 85px;
-	border: solid 5px #8B4513;
+	border: solid 5px #8b4513;
 	text-align: center;
 	line-height: 163px;
 	letter-spacing: 5px;
-	font-family: 'Jura';
+	font-family: "Jura";
 	font-size: 87px;
 	font-weight: bold;
-	color: #FFFFFF;
-	text-shadow: 
-		-0   -10px 0   #ED5B17,
-		 0   -10px 0   #ED5B17,
-		-0    10px 0   #ED5B17,
-		 0    10px 0   #ED5B17,
-		-10px -0   0   #ED5B17,
-		 10px -0   0   #ED5B17,
-		-10px  0   0   #ED5B17,
-		 10px  0   0   #ED5B17,
-		-1px -10px 0   #ED5B17,
-		 1px -10px 0   #ED5B17,
-		-1px  10px 0   #ED5B17,
-		 1px  10px 0   #ED5B17,
-		-10px -1px 0   #ED5B17,
-		 10px -1px 0   #ED5B17,
-		-10px  1px 0   #ED5B17,
-		 10px  1px 0   #ED5B17,
-		-2px -10px 0   #ED5B17,
-		 2px -10px 0   #ED5B17,
-		-2px  10px 0   #ED5B17,
-		 2px  10px 0   #ED5B17,
-		-10px -2px 0   #ED5B17,
-		 10px -2px 0   #ED5B17,
-		-10px  2px 0   #ED5B17,
-		 10px  2px 0   #ED5B17,
-		-3px -10px 0   #ED5B17,
-		 3px -10px 0   #ED5B17,
-		-3px  10px 0   #ED5B17,
-		 3px  10px 0   #ED5B17,
-		-10px -3px 0   #ED5B17,
-		 10px -3px 0   #ED5B17,
-		-10px  3px 0   #ED5B17,
-		 10px  3px 0   #ED5B17,
-		-4px -10px 0   #ED5B17,
-		 4px -10px 0   #ED5B17,
-		-4px  10px 0   #ED5B17,
-		 4px  10px 0   #ED5B17,
-		-10px -4px 0   #ED5B17,
-		 10px -4px 0   #ED5B17,
-		-10px  4px 0   #ED5B17,
-		 10px  4px 0   #ED5B17,
-		-5px -10px 0   #ED5B17,
-		 5px -10px 0   #ED5B17,
-		-5px  10px 0   #ED5B17,
-		 5px  10px 0   #ED5B17,
-		-10px -5px 0   #ED5B17,
-		 10px -5px 0   #ED5B17,
-		-10px  5px 0   #ED5B17,
-		 10px  5px 0   #ED5B17,
-		-6px -10px 0   #ED5B17,
-		 6px -10px 0   #ED5B17,
-		-6px  10px 0   #ED5B17,
-		 6px  10px 0   #ED5B17,
-		-10px -6px 0   #ED5B17,
-		 10px -6px 0   #ED5B17,
-		-10px  6px 0   #ED5B17,
-		 10px  6px 0   #ED5B17,
-		-7px -10px 0   #ED5B17,
-		 7px -10px 0   #ED5B17,
-		-7px  10px 0   #ED5B17,
-		 7px  10px 0   #ED5B17,
-		-10px -7px 0   #ED5B17,
-		 10px -7px 0   #ED5B17,
-		-10px  7px 0   #ED5B17,
-		 10px  7px 0   #ED5B17,
-		-8px -10px 0   #ED5B17,
-		 8px -10px 0   #ED5B17,
-		-8px  10px 0   #ED5B17,
-		 8px  10px 0   #ED5B17,
-		-10px -8px 0   #ED5B17,
-		 10px -8px 0   #ED5B17,
-		-10px  8px 0   #ED5B17,
-		 10px  8px 0   #ED5B17,
-		-9px -10px 0   #ED5B17,
-		 9px -10px 0   #ED5B17,
-		-9px  10px 0   #ED5B17,
-		 9px  10px 0   #ED5B17,
-		-10px -9px 0   #ED5B17,
-		 10px -9px 0   #ED5B17,
-		-10px  9px 0   #ED5B17,
-		 10px  9px 0   #ED5B17,
-		-10px -10px 0   #ED5B17,
-		 10px -10px 0   #ED5B17,
-		-10px  10px 0   #ED5B17,
-		 10px  10px 0   #ED5B17,
-		-10px -10px 0   #ED5B17,
-		 10px -10px 0   #ED5B17,
-		-10px  10px 0   #ED5B17,
-		 10px  10px 0   #ED5B17;
+	color: #ffffff;
+	text-shadow: -0 -10px 0 #ed5b17, 0 -10px 0 #ed5b17, -0 10px 0 #ed5b17, 0 10px 0 #ed5b17, -10px -0 0 #ed5b17,
+		10px -0 0 #ed5b17, -10px 0 0 #ed5b17, 10px 0 0 #ed5b17, -1px -10px 0 #ed5b17, 1px -10px 0 #ed5b17,
+		-1px 10px 0 #ed5b17, 1px 10px 0 #ed5b17, -10px -1px 0 #ed5b17, 10px -1px 0 #ed5b17, -10px 1px 0 #ed5b17,
+		10px 1px 0 #ed5b17, -2px -10px 0 #ed5b17, 2px -10px 0 #ed5b17, -2px 10px 0 #ed5b17, 2px 10px 0 #ed5b17,
+		-10px -2px 0 #ed5b17, 10px -2px 0 #ed5b17, -10px 2px 0 #ed5b17, 10px 2px 0 #ed5b17, -3px -10px 0 #ed5b17,
+		3px -10px 0 #ed5b17, -3px 10px 0 #ed5b17, 3px 10px 0 #ed5b17, -10px -3px 0 #ed5b17, 10px -3px 0 #ed5b17,
+		-10px 3px 0 #ed5b17, 10px 3px 0 #ed5b17, -4px -10px 0 #ed5b17, 4px -10px 0 #ed5b17, -4px 10px 0 #ed5b17,
+		4px 10px 0 #ed5b17, -10px -4px 0 #ed5b17, 10px -4px 0 #ed5b17, -10px 4px 0 #ed5b17, 10px 4px 0 #ed5b17,
+		-5px -10px 0 #ed5b17, 5px -10px 0 #ed5b17, -5px 10px 0 #ed5b17, 5px 10px 0 #ed5b17, -10px -5px 0 #ed5b17,
+		10px -5px 0 #ed5b17, -10px 5px 0 #ed5b17, 10px 5px 0 #ed5b17, -6px -10px 0 #ed5b17, 6px -10px 0 #ed5b17,
+		-6px 10px 0 #ed5b17, 6px 10px 0 #ed5b17, -10px -6px 0 #ed5b17, 10px -6px 0 #ed5b17, -10px 6px 0 #ed5b17,
+		10px 6px 0 #ed5b17, -7px -10px 0 #ed5b17, 7px -10px 0 #ed5b17, -7px 10px 0 #ed5b17, 7px 10px 0 #ed5b17,
+		-10px -7px 0 #ed5b17, 10px -7px 0 #ed5b17, -10px 7px 0 #ed5b17, 10px 7px 0 #ed5b17, -8px -10px 0 #ed5b17,
+		8px -10px 0 #ed5b17, -8px 10px 0 #ed5b17, 8px 10px 0 #ed5b17, -10px -8px 0 #ed5b17, 10px -8px 0 #ed5b17,
+		-10px 8px 0 #ed5b17, 10px 8px 0 #ed5b17, -9px -10px 0 #ed5b17, 9px -10px 0 #ed5b17, -9px 10px 0 #ed5b17,
+		9px 10px 0 #ed5b17, -10px -9px 0 #ed5b17, 10px -9px 0 #ed5b17, -10px 9px 0 #ed5b17, 10px 9px 0 #ed5b17,
+		-10px -10px 0 #ed5b17, 10px -10px 0 #ed5b17, -10px 10px 0 #ed5b17, 10px 10px 0 #ed5b17, -10px -10px 0 #ed5b17,
+		10px -10px 0 #ed5b17, -10px 10px 0 #ed5b17, 10px 10px 0 #ed5b17;
 }
 
-
-#game-field
-{
+#game-field {
 	background: black;
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-image: url('../img/fon1.gif');
+	background-image: url("../img/fon1.gif");
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-	background-position: center;	
+	background-position: center;
 	overflow: hidden;
 	position: absolute;
 }
-.point-block{
-  font-family: 'Jura';
-  font-size: 35px;
-  font-weight: 500;
-  color: #BA55D3;
-  position: absolute;
-  top: 5px;
-  left: 5px; 
+.point-block {
+	font-family: "Jura";
+	font-size: 35px;
+	font-weight: 500;
+	color: #ba55d3;
+	position: absolute;
+	top: 5px;
+	left: 5px;
 }
 
 .lifes-block {
@@ -178,28 +108,28 @@ font-family: 'Jura';
 
 .lifes-block img {
 	height: 50px;
-	width: 50px;	
-	display: block; 
+	width: 50px;
+	display: block;
 	float: right;
-	margin-left: auto;	
+	margin-left: auto;
 }
 
 .starship {
-	background-image: url('../img/starship.gif');
-	transition: all, 0.05s;	
+	background-image: url("../img/starship.gif");
+	transition: all, 0.05s;
 	width: 80px;
 	height: 120px;
-	display: none;
+	display: block;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	position: absolute;
 	top: calc(100% - 70px);
 	left: 50%;
-	transform: translate( -50%, -50%);
+	transform: translate(-50%, -50%);
 }
 .starship-explosion {
-	background-image: url('../img/starship-explosion.gif');
+	background-image: url("../img/starship-explosion.gif");
 	width: 150px;
 	height: 150px;
 	display: block;
@@ -209,9 +139,9 @@ font-family: 'Jura';
 	position: absolute;
 	top: calc(100% - 70px);
 	left: 50%;
-	transform: translate( -50%, -50%);
+	transform: translate(-50%, -50%);
 }
-#bullet{
+#bullet {
 	background: #09e3fffa;
 	height: 13px;
 	width: 3px;
@@ -220,21 +150,21 @@ font-family: 'Jura';
 	transition: all 1s;
 }
 .chicken {
-	background-image: url('../img/chicken.gif');
+	background-image: url("../img/chicken.gif");
 	width: 100px;
 	height: 100px;
-    display: block;
+	display: block;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	position: absolute;
-	transform: translate( 50%, 50%);
+	transform: translate(50%, 50%);
 }
 .chicken-explosion {
-	background-image: url('../img/chicken-explosion.gif');
+	background-image: url("../img/chicken-explosion.gif");
 	width: 150px;
 	height: 150px;
-    display: block;
+	display: block;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -242,15 +172,14 @@ font-family: 'Jura';
 }
 
 .bonus {
-	background-image: url('../img/bonus/burger.gif');
+	background-image: url("../img/bonus/burger.gif");
 	transition: all 1s;
 	width: 40px;
 	height: 40px;
-    display: block;
+	display: block;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	position: absolute;
-	transform: translate( 100%, 150%);
+	transform: translate(100%, 150%);
 }
-

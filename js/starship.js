@@ -1,19 +1,15 @@
 // Функция создания Звездалета
 function createStarship() {
-	starship = document.createElement("div");
-	starship.className = "starship";
 	setTimeout(function () {
-		starship.style.display = "block";
-		// starship.style.position = "absolute";
-		// starship.style.top = "calc(100 % - 70px)";
-		// starship.style.left = "50 %";
+		starship = document.createElement("div");
+		starship.className = "starship";
 		gameField.appendChild(starship);
 		move = true;
 	}, 2000);
 }
 
 function destroyStarship(thisStarship, thisRec) {
-	// function destroyStarship(thisStarship) {
+	// function destroyStarship(thisRec) {
 	soundClick(3);
 	// move = false;
 	let starshipEexplosion = document.createElement("div");
@@ -33,7 +29,7 @@ function destroyStarship(thisStarship, thisRec) {
 	}
 
 	// if (lifesCount > 1) {
-	// thisStarship.remove(); // Удалять нельзя через самого себя!
+	// thisStarship.remove(); // Удалять нельзя через самого себя!	
 	starship.remove();
 	console.dir("Starship УМЕР");
 	removeLifes();
