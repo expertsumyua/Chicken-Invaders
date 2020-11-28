@@ -21,6 +21,7 @@ var lifesCount = null;
 var pointBlock = null;
 // переменная очков
 var pointCount = null;
+var finishPoint = 1;
 
 //var keyS = false;
 
