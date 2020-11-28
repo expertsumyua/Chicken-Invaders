@@ -28,7 +28,7 @@ function pointCounter(count) {
 		pointCount += count;
 		pointBlock.innerText = pointCount;
 	}
-	if (pointCount >= 10) {
+	if (pointCount >= finishPoint) {
 		starship.remove();
 		clearGameField();
 		showGameWindow(gameStatus.FINISH);
