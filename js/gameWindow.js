@@ -101,7 +101,7 @@ function showStartWindow() {
 	discription2.innerText = "Ты последний наш звездолет, - смотри не налажай!";
 	var startBlock = createEl("div", "start-block");
 	var startButton = createEl("div", "start-button");
-	startButton.innerText = "START";
+	// startButton.innerText = "START";
 	startButton.onclick = function () {
 		showGameWindow(gameStatus.PLAY);
 	};
@@ -110,13 +110,14 @@ function showStartWindow() {
 	gameWindow.appendChild(startBlock);
 	startBlock.appendChild(startButton);
 	gameApplication.append(gameWindow);
+
 	//при наведении курсора на стартовую кнопку, - меняем текст
-	startButton.onmouseover = function () {
-		startButton.innerHTML = "GO";
-	};
-	startButton.onmouseout = function () {
-		startButton.innerHTML = "START";
-	};
+	// startButton.onmouseover = function () {
+	// 	startButton.innerHTML = "GO";
+	// };
+	// startButton.onmouseout = function () {
+	// 	startButton.innerHTML = "START";
+	// };
 
 }
 

@@ -96,6 +96,53 @@ button {
 	line-height: 65px;
 }
 
+#start-button::before {
+	content: "START";
+}
+
+button:hover,
+#start-button:hover {
+	background-color: #ddba60;
+}
+
+#start-button:hover::before {
+	content: "GO";
+}
+
+button:active,
+#start-button:active {
+	background-color: #d67112;
+}
+
+/* ================================================ */
+/* button.start-button {
+	background: transparent;
+	background-color: transparent;
+	outline: none;
+	border: medium none;
+	display: inline-block;
+	background-image: url("../img/startBatton1.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 160px;
+	height: 160px;
+
+	position: absolute;
+	top: 80%;
+	left: 90%;
+	transform: translate(-50%, -50%);
+}
+
+button.start-button:hover {
+	background-image: url("../img/startBatton2.png");
+}
+
+button.start-button:active {
+	background-image: url("../img/startBatton3.png");
+} */
+/* ================================================ */
+
 #game-field {
 	background: black;
 	display: block;
