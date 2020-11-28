@@ -19,6 +19,13 @@ body,
 #h3_2,
 #h3_3 {
 	margin-top: 0;
+	font-family: "Jura";
+	font-size: 35px;
+	font-weight: 500;
+	color: #ba55d3;
+	/* position: absolute; */
+	top: 5px;
+	left: 5px;
 }
 
 #discription {
