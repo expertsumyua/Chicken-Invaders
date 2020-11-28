@@ -14,6 +14,9 @@ body,
 	background-image: url("../img/fon2.gif");
 	background-size: 100%;
 }
+.standardWindow h3 {
+	margin-top: 0;
+}
 
 #discription {
 	margin-top: 0px;
