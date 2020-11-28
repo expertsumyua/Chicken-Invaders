@@ -47,7 +47,7 @@ function showNextLevelWindow() {
 	var gameWindow = createEl("div", "next-level-window");
 
 	var showScore = createEl("h3");
-	showScore.innerText = "Ваш счет:";
+	showScore.innerText = "Ваш счет: " + pointCount;
 	gameWindow.append(showScore);
 
 	var nextButton = createEl("button", "next-level-_button");
@@ -73,7 +73,7 @@ function showFinishWindow() {
 	gameWindow.className = "standardWindow";
 
 	var showScore = createEl("h3");
-	showScore.innerText = "Ваш счет:";
+	showScore.innerText = "Ваш счет: " + pointCount;
 	gameWindow.append(showScore);
 
 	var restartButton = createEl("button", "restart-button");
