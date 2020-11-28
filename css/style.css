@@ -57,6 +57,7 @@ body,
 	border-radius: 85px;
 }
 
+button,
 #start-button {
 	position: absolute;
 	background-color: #daa520;
@@ -89,6 +90,10 @@ body,
 		9px 10px 0 #ed5b17, -10px -9px 0 #ed5b17, 10px -9px 0 #ed5b17, -10px 9px 0 #ed5b17, 10px 9px 0 #ed5b17,
 		-10px -10px 0 #ed5b17, 10px -10px 0 #ed5b17, -10px 10px 0 #ed5b17, 10px 10px 0 #ed5b17, -10px -10px 0 #ed5b17,
 		10px -10px 0 #ed5b17, -10px 10px 0 #ed5b17, 10px 10px 0 #ed5b17;
+}
+button {
+	font-size: 45px;
+	line-height: 65px;
 }
 
 #game-field {
