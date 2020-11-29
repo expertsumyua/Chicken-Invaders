@@ -76,7 +76,7 @@ function showFinishWindow() {
 	showScore.innerText = "Ваш счет: " + pointCount;
 	gameWindow.append(showScore);
 
-	var restartButton = createEl("button", "restart-button");
+	var restartButton = createEl("div", "restart-button");
 	restartButton.innerText = "Рестарт игры!";
 	restartButton.onclick = function () {
 		showGameWindow(gameStatus.START);
@@ -99,7 +99,7 @@ function showStartWindow() {
 	discription.innerText = "Нашу планету захватили космо-куры!";
 	var discription2 = createEl('h2', 'discription2');
 	discription2.innerText = "Ты последний наш звездолет, - смотри не налажай!";
-	var startBlock = createEl("div", "start-block");
+	// var startBlock = createEl("div", "start-block");
 	var startButton = createEl("div", "start-button");
 	// startButton.innerText = "START";
 	startButton.onclick = function () {
@@ -107,8 +107,10 @@ function showStartWindow() {
 	};
 	gameWindow.append(discription);
 	gameWindow.append(discription2);
-	gameWindow.appendChild(startBlock);
-	startBlock.appendChild(startButton);
+	// gameWindow.appendChild(startBlock);
+	// startBlock.appendChild(startButton);
+	gameWindow.appendChild(startButton);
+
 	gameApplication.append(gameWindow);
 
 	//при наведении курсора на стартовую кнопку, - меняем текст
