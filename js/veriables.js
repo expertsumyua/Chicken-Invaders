@@ -22,7 +22,7 @@ var pointBlock = null;
 // переменная очков
 var pointCount = null;
 // переменная набраных очков
-var finishPoint = 1;
+var finishPoint = 10;
 
 //var keyS = false;
 
