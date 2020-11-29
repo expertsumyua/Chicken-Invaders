@@ -47,7 +47,7 @@ body,
 	margin-bottom: 15px;
 }
 
-#start-block {
+/* #start-block {
 	background-color: red;
 	height: 200px;
 	width: 390px;
@@ -55,93 +55,63 @@ body,
 	margin: 100px auto;
 	box-shadow: 0 5px 5px 2px black;
 	border-radius: 85px;
-}
+} */
 
-button,
+#restart-button,
 #start-button {
-	position: absolute;
+	display: block;
+	position: relative;
+	margin: 100px auto;
 	background-color: #daa520;
 	height: 163px;
 	width: 381px;
 	border-radius: 85px;
-	border: solid 5px #8b4513;
+	border: solid 5px red;
 	text-align: center;
-	line-height: 163px;
+	line-height: 150px;
 	letter-spacing: 5px;
 	font-family: "Jura";
-	font-size: 87px;
+	font-size: 90px;
 	font-weight: bold;
 	color: #ffffff;
-	text-shadow: -0 -10px 0 #ed5b17, 0 -10px 0 #ed5b17, -0 10px 0 #ed5b17, 0 10px 0 #ed5b17, -10px -0 0 #ed5b17,
-		10px -0 0 #ed5b17, -10px 0 0 #ed5b17, 10px 0 0 #ed5b17, -1px -10px 0 #ed5b17, 1px -10px 0 #ed5b17,
-		-1px 10px 0 #ed5b17, 1px 10px 0 #ed5b17, -10px -1px 0 #ed5b17, 10px -1px 0 #ed5b17, -10px 1px 0 #ed5b17,
-		10px 1px 0 #ed5b17, -2px -10px 0 #ed5b17, 2px -10px 0 #ed5b17, -2px 10px 0 #ed5b17, 2px 10px 0 #ed5b17,
-		-10px -2px 0 #ed5b17, 10px -2px 0 #ed5b17, -10px 2px 0 #ed5b17, 10px 2px 0 #ed5b17, -3px -10px 0 #ed5b17,
-		3px -10px 0 #ed5b17, -3px 10px 0 #ed5b17, 3px 10px 0 #ed5b17, -10px -3px 0 #ed5b17, 10px -3px 0 #ed5b17,
-		-10px 3px 0 #ed5b17, 10px 3px 0 #ed5b17, -4px -10px 0 #ed5b17, 4px -10px 0 #ed5b17, -4px 10px 0 #ed5b17,
-		4px 10px 0 #ed5b17, -10px -4px 0 #ed5b17, 10px -4px 0 #ed5b17, -10px 4px 0 #ed5b17, 10px 4px 0 #ed5b17,
-		-5px -10px 0 #ed5b17, 5px -10px 0 #ed5b17, -5px 10px 0 #ed5b17, 5px 10px 0 #ed5b17, -10px -5px 0 #ed5b17,
-		10px -5px 0 #ed5b17, -10px 5px 0 #ed5b17, 10px 5px 0 #ed5b17, -6px -10px 0 #ed5b17, 6px -10px 0 #ed5b17,
-		-6px 10px 0 #ed5b17, 6px 10px 0 #ed5b17, -10px -6px 0 #ed5b17, 10px -6px 0 #ed5b17, -10px 6px 0 #ed5b17,
-		10px 6px 0 #ed5b17, -7px -10px 0 #ed5b17, 7px -10px 0 #ed5b17, -7px 10px 0 #ed5b17, 7px 10px 0 #ed5b17,
-		-10px -7px 0 #ed5b17, 10px -7px 0 #ed5b17, -10px 7px 0 #ed5b17, 10px 7px 0 #ed5b17, -8px -10px 0 #ed5b17,
-		8px -10px 0 #ed5b17, -8px 10px 0 #ed5b17, 8px 10px 0 #ed5b17, -10px -8px 0 #ed5b17, 10px -8px 0 #ed5b17,
-		-10px 8px 0 #ed5b17, 10px 8px 0 #ed5b17, -9px -10px 0 #ed5b17, 9px -10px 0 #ed5b17, -9px 10px 0 #ed5b17,
-		9px 10px 0 #ed5b17, -10px -9px 0 #ed5b17, 10px -9px 0 #ed5b17, -10px 9px 0 #ed5b17, 10px 9px 0 #ed5b17,
-		-10px -10px 0 #ed5b17, 10px -10px 0 #ed5b17, -10px 10px 0 #ed5b17, 10px 10px 0 #ed5b17, -10px -10px 0 #ed5b17,
-		10px -10px 0 #ed5b17, -10px 10px 0 #ed5b17, 10px 10px 0 #ed5b17;
+	text-shadow: red 7px 7px 7px;
+	box-shadow: red 10px 10px 10px;
 }
-button {
-	font-size: 45px;
-	line-height: 65px;
+#restart-button {
+	text-align: center;
+	font-size: 65px;
+	line-height: 75px;
+	letter-spacing: 5px;
 }
 
 #start-button::before {
 	content: "START";
 }
 
-button:hover,
+#restart-button:hover,
 #start-button:hover {
-	background-color: #ddba60;
+	opacity: 0.7;
+	background-color: #daa520;
+	border: solid 5px rgb(77, 86, 214);
+	text-shadow: rgb(77, 86, 214) 7px 7px 7px;
+	box-shadow: rgb(77, 86, 214) 10px 10px 10px;
 }
 
 #start-button:hover::before {
-	content: "GO";
+	content: "GO...";
 }
 
-button:active,
+#restart-button:active,
 #start-button:active {
-	background-color: #d67112;
+	opacity: 0.99;
+	background-color: red;
+	border: solid 5px white;
+	text-shadow: white 5px 5px 5px;
+	box-shadow: white 10px 10px 10px;
 }
-
-/* ================================================ */
-/* button.start-button {
-	background: transparent;
-	background-color: transparent;
-	outline: none;
-	border: medium none;
-	display: inline-block;
-	background-image: url("../img/startBatton1.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 160px;
-	height: 160px;
-
-	position: absolute;
-	top: 80%;
-	left: 90%;
-	transform: translate(-50%, -50%);
+#start-button:active::before {
+	content: "GO!!!";
 }
-
-button.start-button:hover {
-	background-image: url("../img/startBatton2.png");
-}
-
-button.start-button:active {
-	background-image: url("../img/startBatton3.png");
-} */
-/* ================================================ */
 
 #game-field {
 	background: black;
