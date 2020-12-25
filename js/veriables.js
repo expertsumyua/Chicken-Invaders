@@ -24,6 +24,9 @@ var pointCount = null;
 // переменная набраных очков
 var finishPoint = 10;
 
+var volume = 0.5;
+var currentVolume = null;
+
 //var keyS = false;
 
 // gameField - блок игрового поля
@@ -32,7 +35,7 @@ var gameField = null;//document.querySelector("#game-field");
 // Переменнная отвечвющая за возможность передвиени корабля.
 // Если не применить ей всобытиях нажатия, то кораблик не будет
 // изменять свое озображение.
-var move = true;
+// var move = false;
 
 var game = true;
 

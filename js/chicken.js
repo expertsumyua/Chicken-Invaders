@@ -74,7 +74,9 @@ function createChicken() {
 	// Добавляем на игровое поле.
 	gameField.appendChild(chicken);
 	// Полетели.
-	chicken.startFly(chicken);
+	// chicken.startFly(chicken);
+	chicken.startFly();
+
 }
 
 /**
@@ -340,7 +342,6 @@ function startFly() {
 		chicken.setY(posY);
 		//Проверяем, не попался ли нам в лапы игрок ;)
 		if (chicken.isIntersect(starship)) {
-			move = false;
 			// Рвем гада.. >:-<<
 			destroyStarship(starship, chicken);
 			// destroyStarship(chicken);
@@ -374,19 +375,19 @@ function isIntersect(element) {
  */
 function destroyChicken(thisChicken) {
 	clearInterval(thisChicken._timerId);
-	let chickenEexplosion = document.createElement("div");
-	chickenEexplosion.style.left = thisChicken.offsetLeft + "px";
-	chickenEexplosion.style.top = thisChicken.offsetTop + "px";
+	let chickenExplosion = document.createElement("div");
+	chickenExplosion.style.left = thisChicken.offsetLeft + "px";
+	chickenExplosion.style.top = thisChicken.offsetTop + "px";
 	if (thisChicken.className == "chicken") {
-		chickenEexplosion.className = "chicken-explosion";
-		gameField.append(chickenEexplosion);
+		chickenExplosion.className = "chicken-explosion";
+		gameField.append(chickenExplosion);
 		createBonus(thisChicken);
 		setTimeout(function () {
-			chickenEexplosion.remove();
+			chickenExplosion.remove();
 		}, 1500);
 
 	}
-	soundClick(2);
+	soundObjects(2);
 	removeChicken(thisChicken);
 }
 

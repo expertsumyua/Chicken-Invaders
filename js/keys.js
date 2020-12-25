@@ -1,5 +1,5 @@
 /*==================================================================
-						ДВИЖЕНИЕ ЭЛЕМЕНТОВ
+						СОБЫТИЯ НАЖАТИЯ КЛАВИШ
 ===================================================================*/
 
 var keys = {
@@ -17,43 +17,48 @@ var setKey = function (keyCode) {
 };
 
 var clearKey = function (keyCode) {
-	keyDown [keyCode] = false;
+	keyDown[keyCode] = false;
 };
 
 var isKeyDown = function (keyName) {
 	return keyDown[keys[keyName]] == true;
 };
 
-if (move) var gameEngine = function () {
-	if ((typeof engine == 'function') ) {
-		engine();
-	} else {
-		console.log ("Не определена функция engine");
-	}
-	requestAnimationFrame(gameEngine);
-};
+// if (move) var gameKeyAction = function () {
+// 	if ((typeof keyAction == 'function')) {
+// 		keyAction();
+// 	} else {
+// 		console.log("Не определена функция keyAction");
+// 	}
+// 	requestAnimationFrame(gameKeyAction);
+// };
 
-if (move) window.onload = function () {
+window.onload = function () {
+	StartTrackingEvents();
+
 	window.onkeydown = function (event) {
 		setKey(event.keyCode);
+		// if (starship) {
+		// 	keyAction();
+		// 	// setInterval(keyAction, 10);
+		// }
 	};
-	
+
 	window.onkeyup = function (event) {
+		clearKey(event.keyCode);
 		if (starship) {
 			starship.style.backgroundImage = "url('img/starship.gif')";
 		}
-		clearKey(event.keyCode);
 	};
 
-	gameEngine();
+	// gameKeyAction();
 };
 
 
-if (move) function engine() {
-
+function keyAction() {
 	if (isKeyDown('Left')) {
 		starship.style.backgroundImage = "url('img/starship-left.gif')";
-		if(starship.offsetLeft < starship.offsetWidth) {
+		if (starship.offsetLeft < starship.offsetWidth / 2) {
 			starship.style.left = starship.offsetLeft + 0 + "px";
 		} else {
 			starship.style.left = starship.offsetLeft - 10 + "px";
@@ -61,31 +66,31 @@ if (move) function engine() {
 	}
 	if (isKeyDown('Right')) {
 		starship.style.backgroundImage = "url('img/starship-right.gif')";
-		if(starship.offsetLeft > gameField.offsetWidth - starship.offsetWidth) {
+		if (starship.offsetLeft > gameField.offsetWidth - starship.offsetWidth / 2) {
 			starship.style.left = starship.offsetLeft + 0 + "px";
 		} else {
 			starship.style.left = starship.offsetLeft + 10 + "px";
 		}
 	}
 	if (isKeyDown('Up')) {
-		if(starship.offsetTop < gameField.offsetHeight / 2) {
+		if (starship.offsetTop < starship.offsetHeight / 2) {
 			starship.style.top = starship.offsetTop + 0 + "px";
 		} else {
 			starship.style.top = starship.offsetTop - 10 + "px";
 		}
 	}
 	if (isKeyDown('Down')) {
-		if(starship.offsetTop > gameField.offsetHeight - 75) {
+		if (starship.offsetTop > gameField.offsetHeight - starship.offsetHeight / 2) {
 			starship.style.top = starship.offsetTop + 0 + "px";
 		} else {
 			starship.style.top = starship.offsetTop + 10 + "px";
 		}
-	}	
-	if (isKeyDown('Space')) 
-		{
-			soundClick(1);
-			createBullet();
-		}	
+	}
+	if (isKeyDown('Space')) {
+		soundObjects(1);
+		createBullet();
+	}
 
+	// requestAnimationFrame(keyAction);
 }
 

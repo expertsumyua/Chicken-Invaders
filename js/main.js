@@ -19,6 +19,7 @@ function level1() {
 						GameStart
 ====================================================================*/
 showGameWindow(gameStatus.START);
+createFullScreen();
 
 
 // function main()

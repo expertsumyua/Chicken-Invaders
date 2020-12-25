@@ -183,6 +183,7 @@ body,
 	position: absolute;
 	bottom: 30px;
 	transition: all 1s;
+	/* transition-duration: 3s; */
 }
 .chicken {
 	background-image: url("../img/chicken.gif");
@@ -217,4 +218,44 @@ body,
 	background-position: center;
 	position: absolute;
 	transform: translate(100%, 150%);
+}
+
+.sound-volume {
+	font-family: "Jura";
+	color: #ba55d3;
+	position: absolute;
+	width: 125px;
+	height: 75px;
+	bottom: 50px;
+	right: 5px;
+	opacity: 0.7;
+}
+#simbol {
+	font-size: 35px;
+	cursor: pointer;
+	user-select: none;
+}
+#louder {
+	font-size: 25px;
+	cursor: pointer;
+	user-select: none;
+}
+#quieter {
+	font-size: 25px;
+	cursor: pointer;
+	user-select: none;
+}
+
+#fullScreen {
+	user-select: none;
+	background-color: #daa520;
+	font-size: 35px;
+	cursor: pointer;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: 150px;
+	right: 15px;
+	text-align: center;
+	opacity: 0.7;
 }
