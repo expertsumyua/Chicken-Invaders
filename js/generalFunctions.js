@@ -111,7 +111,6 @@ function trackingEvents() {
 		}
 	}
 
-
 }
 
 let eventTrackingTimer;
