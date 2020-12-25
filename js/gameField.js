@@ -14,7 +14,7 @@ function createPointBlock(thisP) {
 function pointCounter(count) {
 	// if (move) {
 	if (count == 4) {
-		soundClick(5);
+		soundObjects(5);
 		if (lifesCount < lifesAmount) {
 			addLifes();
 		}
@@ -22,9 +22,8 @@ function pointCounter(count) {
 			pointCount += count;
 			pointBlock.innerText = pointCount;
 		}
-
 	} else {
-		soundClick(4);
+		soundObjects(4);
 		pointCount += count;
 		pointBlock.innerText = pointCount;
 	}
@@ -40,7 +39,6 @@ function pointCounter(count) {
 function removePointBlock() {
 	pointBlock.remove();
 }
-
 
 // создание блока lifes;
 function createLifesBlock(thisL) {
@@ -90,7 +88,7 @@ function removeLifesBlock() {
 function createGameField() {
 	game = true;
 	move = true;
-	soundFonStart();
+	createGameSound();
 	createStarship();
 	// lifesCount = 5;
 	createLifesBlock(lifesCount = lifesAmount);
@@ -105,7 +103,7 @@ function createGameField() {
 function clearGameField() {
 	move = false;
 	game = false;
-	soundFonStop();
+	removeGameSound();
 	clearBonuses();
 	clearChickens();
 	// let starship = document.querySelector(".starship");
@@ -115,4 +113,35 @@ function clearGameField() {
 	gameField.remove();
 
 	// console.dir("Осталось всего курей: " + chickenCount);
+}
+
+// создание блока fullScreen
+function createFullScreen() {
+	let body = document.querySelector("body");
+
+	let fullScreen = document.createElement("div");
+	fullScreen.id = "fullScreen";
+	fullScreen.innerHTML = "⇱";
+	fullScreen.onclick = function () {
+		let element = document.querySelector("body");
+
+		let full_screen_element = document.fullscreenElement;
+		// If no element is in full-screen
+		if (full_screen_element !== null) {
+			document.exitFullscreen();
+			fullScreen.innerHTML = "⇱";
+			console.log('FullScreen mode is activated');
+		}
+		else {
+			element.requestFullscreen();
+			fullScreen.innerHTML = "⇲";
+			console.log('FullScreen mode is not activated');
+		}
+	}
+	body.appendChild(fullScreen);
+}
+// удвление блока fullScreen
+function removeFullScreen() {
+	let fullScreen = document.getElementById("fullScreen");
+	fullScreen.remove();
 }

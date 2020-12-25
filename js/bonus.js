@@ -37,7 +37,7 @@ function createBonus(thisRec) {
 				bonus.style.top = bonus.offsetTop + 1 + "px";
 				// isCollide(bonus, starship)
 				if (isCollide(bonus, starship)) {
-					clearTimeout(bonusInt);
+					clearInterval(bonusInt);
 					removeBonus(bonus);
 					if (move) {
 						pointCounter(count);
@@ -45,7 +45,7 @@ function createBonus(thisRec) {
 				}
 				else if (bonus.offsetTop > gameField.offsetHeight) {
 					//console.dir(bonus.offsetTop);
-					clearTimeout(bonusInt);
+					clearInterval(bonusInt);
 					removeBonus(bonus);
 				}
 			}, 25);
@@ -58,10 +58,17 @@ function removeBonus(thisBonus) {
 	thisBonus.remove();
 }
 
+function clearBonuses() {
+	let bonus = document.querySelectorAll(".bonus");
+	bonus.forEach(function (bonus) {
+		removeBonus(bonus);
+	});
+}
 
 function createEgg(RecX, RecY) {
 	let egg = document.createElement("div");
 	egg.className = "bonus";
+	egg.id = "egg";
 	egg.style.top = RecY + "px";
 	egg.style.left = RecX + "px";
 	egg.style.backgroundImage = "url('img/bonus/egg.png')";
@@ -75,7 +82,7 @@ function createEgg(RecX, RecY) {
 				egg.style.top = egg.offsetTop + 1 + "px";
 				// isCollide(egg, starship)
 				if (isCollide(egg, starship)) {
-					clearTimeout(eggInt);
+					clearInterval(eggInt);
 					removeEgg(egg);
 					if (move) {
 						destroyStarship(starship, egg);
@@ -83,7 +90,7 @@ function createEgg(RecX, RecY) {
 					}
 				}
 				else if (egg.offsetTop > gameField.offsetHeight) {
-					clearTimeout(eggInt);
+					clearInterval(eggInt);
 					removeEgg(egg);
 				}
 			}, 25);
@@ -96,11 +103,4 @@ function createEgg(RecX, RecY) {
 
 function removeEgg(thisEgg) {
 	thisEgg.remove();
-}
-
-function clearBonuses() {
-	let bonus = document.querySelectorAll(".bonus");
-	bonus.forEach(function (bonus) {
-		removeBonus(bonus);
-	});
 }
