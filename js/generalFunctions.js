@@ -76,7 +76,8 @@ function createEl(typeName, id) {
 }
 
 function trackingEvents() {
-	if (starship) keyAction();
+	if (starship) { keyAction() };
+
 	let bullets = document.querySelectorAll('#bullet');
 	for (let bullet of bullets) {
 		bullet.style.top = bullet.offsetTop - 3000 + "px";
@@ -110,6 +111,11 @@ function trackingEvents() {
 			}
 		}
 	}
+	/* НИЖЕ НАДО ЗАПИХНУТЬ "Интервальный расчёт курей"  !!!   */
+	let chickens = document.querySelectorAll('.chicken');
+	for (let chicken of chickens) {
+
+	}
 
 }
 
@@ -120,6 +126,6 @@ function StartTrackingEvents() {
 	// eventTrackingTimer = setInterval(trackingEvents, 60);
 }
 function StopTrackingEvents() {
-	// cancelAnimationFrame(eventTrackingTimer);
-	clearInterval(eventTrackingTimer);
+	cancelAnimationFrame(eventTrackingTimer);
+	// clearInterval(eventTrackingTimer);
 }

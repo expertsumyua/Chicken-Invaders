@@ -347,7 +347,7 @@ function startFly() {
 			// destroyStarship(chicken);
 			// destroyChicken(chicken);
 		} else if (0 >= randomCreate--) {
-			this.createEgg(posX, posY);
+			chicken.createEgg(posX, posY);
 			randomCreate = random(1000, 2500);
 		}
 
