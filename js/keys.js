@@ -53,8 +53,7 @@ window.onload = function () {
 
 	// gameKeyAction();
 };
-
-
+// действия клавиш
 function keyAction() {
 	if (isKeyDown('Left')) {
 		starship.style.backgroundImage = "url('img/starship-left.gif')";
